@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: q2-web-app # {{ .Values.name }}  
+  name: q2-web-app
 spec:
-  replicas: 3 # {{ .Values.replicaCount }} 
+  replicas: 3  
   revisionHistoryLimit: 3
   selector:
     matchLabels:
