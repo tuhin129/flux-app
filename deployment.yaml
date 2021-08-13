@@ -5,7 +5,7 @@ metadata:
   name: q2-web-app
 spec:
   replicas: 3
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: q2-web-app
