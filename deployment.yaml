@@ -1,1 +1,21 @@
 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: q2-web-app
+spec:
+  replicas: 3
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: q2-web-app
+  template:
+    metadata:
+      labels:
+        app: q2-web-app
+    spec:
+      containers:
+      - name: q2-web-app
+        image: 1292003/finalexam:latest
+        ports:
+        - containerPort: 8080
